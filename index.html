@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,intial-scale=1.0">
+        <title>portfoilo website - Easy Tutorials</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/95848fda6c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+ <div class="container">
+        <nav>  
+                <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+             <h1><span> Pavani</span></h1>
+        </div>
+ </div>
+</div>
+<!----------about------------->
+<div id="about">
+        <div class="container">
+                <div class="row">
+                        <div class="about-col-1">
+                                <img src="images/WhatsApp Image 2024-07-11 at 16.06.37_43197615.jpg">
+                        </div>
+                        <div class="about-col-2">
+                                <h2 class="sub-title">About Me</h2>
+                                <p>My self Pavani.I have completed my professional degree in JNTUA college of Engineering kalikiri with the agregation of 78%.
+                                        During my schooling, I developed strong communication skills and also had the opportunity to participate and excel in 
+                                        several extracurricular activities. Because of these exposures and experiences during my academic years, I have gradually
+                                        been able to develop effective communication skills. So, I can interact freely within a team.
+                                        I am quick learner and hard worker.I'm passionate about software engineer.I am always excited to take new chalenges.
+                                        I am trying to develop a habit of reading current trends and industry news.</p>
+                                   <div class="tab-titles">
+                                        
+                                        <p class="tab-links active-link"onclick="opentab('Education')">Education</p>
+                                   </div>
+                                   
+                                   <div class="tab-contents active-tab" id="Education">
+                                        <ul>
+                                                <li><span>2020-2024</span><br>JNTUA COLLEGE OF ENGINEERING KALIKIRI</li>
+                                                <li><span>2018-2020</span><br>SSN Priyadharshini Jr.College</li>
+                                                <li><span>2017-2018</span><br>Govt.High School</li>
+                                        </ul>
+                                   </div>
+
+                        </div>
+                </div>
+        </div>
+</div>
+<!------------skills---------->
+<div id="skills">
+         <div class="container">
+                <h2 class="sub-title">Skills</h2>
+                <div class="skills-list">
+
+                                        <ul>
+                                                <li><span>C-programming</span></li>
+                                                <li><span>Python</span></li>
+                                                <li><span>Java</span></li>
+                                                <li><span>Autocad</span></li>
+                                                <li><span>Catia</span></li>
+                                        </ul>
+                </div>
+         </div>
+</div>
+<!----------------------portfolio------------>
+<div id="Projects">
+        <div class="container">
+                <h2 class="sub-title">Projects</h2>
+                <div class="project-list">
+                        <div class="project">
+                                <img src="images/Screenshot 2024-07-21 183716.png">
+                                <div class="Layer">
+                                        <h3>Web Development</h3>
+                                        <p>The apps connects us around the world.Download it from play store.</p>
+                                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                </div>
+                        </div>
+                        <div class="project">
+                                <img src="images/Headphone.webp">
+                                <div class="Layer">
+                                        <h3>Music App</h3>
+                                        <p>The apps connects us around the world.Download it from play store.</p>
+                                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                </div>
+                        </div>
+                        <div class="project">
+                                <img src="images/online.jpeg">
+                                <div class="Layer">
+                                        <h3>Online shopping app</h3>
+                                        <p>The apps connects us around the world.Download it from play store.</p>
+                                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                </div>
+                        </div>
+                </div>
+                <a href="#"class="btn">See more</a>
+        </div>
+</div>
+<!--------------------contact----------------->
+<div id="contact">
+        <div class="container">
+                <div class="row">
+                        <div class="contact-left">
+                                <h2 class="sub-title">Contact Me</h2>
+                                <p><i class="fa-solid fa-envelope"></i>kagitapavani2@gmail.com</p>
+                                <p><i class="fa-solid fa-phone"></i>7569754269</p>
+                                <div class="social-icons">
+                                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                                </div>
+                                <a href="images/PAVANI resume 1.pdf" download class="btn btn2">Download CV</a>
+                                
+                        </div>
+                        
+                </div>
+        </div>
+        <div class="copyright">
+                <p>copyright @ Pavani.Made with<i class="fa-solid fa-heart"></i> by Easy Tutorials</p>
+        </div>
+</div>
+<script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+                for(tablink of tablinks){
+                        tablink.classlist.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                        tabcontent.classlist.remove("active-tab");
+                }
+                event.currentTarget.classlist.add("active-link");
+                document.getElementById(tabname).classlist.add("active-tab");
+        }
+</script>
+<script>
+        var sidemenu=document.getElementById("sidemenu");
+        function openmenu(){
+                sidemenu.style.right="0";
+        }
+        function closemenu(){
+                sidemenu.style.right="-200px";
+        }
+</script>
+</body>
+</html>
